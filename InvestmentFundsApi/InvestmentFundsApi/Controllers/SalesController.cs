@@ -9,31 +9,16 @@ namespace InvestmentFundsApi.Controllers
 {
     public class SalesController : ApiController
     {
-        // GET api/values
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
 
-        // GET api/values/5
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/values
-        public void Post([FromBody]string value)
+        public void Post(int FundId, int SellType, Decimal Amount, int SellBank, string SellAccount )
         {
         }
 
-        // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
+        public void Post(string sourceFund, string destinationFund, string sellType, decimal ProspectAcceptanceTransfer, bool RiskAcceptanceTransfer)
         {
+
         }
 
-        // DELETE api/values/5
-        public void Delete(int id)
-        {
-        }
+
     }
 }
