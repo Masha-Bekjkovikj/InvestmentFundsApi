@@ -21,7 +21,12 @@ namespace InvestmentFundsApi.Controllers
         {
 
         }
+        [HttpPost]
+        [Route("request/buy/", Name = "Request_Buy_Shares_Post")]
+        public void Post(int FundId, decimal Amount, int PaymentType)
+        {
 
+        }
 
     }
 }
