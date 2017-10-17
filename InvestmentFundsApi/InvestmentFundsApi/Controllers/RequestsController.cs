@@ -9,8 +9,19 @@ namespace InvestmentFundsApi.Controllers
 {
     public class RequestsController : ApiController
     {
-        [HttpPost]
+        
+        
         public void Post(int FundId, int SellType, Decimal Amount, int SellBank, string SellAccount)
         {
+           
         }
+
+
+        // POST api/Zahtevi3
+        public void Post(string sourceFund, string destinationFund, string sellType, decimal ProspectAcceptanceTransfer, bool RiskAcceptanceTransfer)
+        {
+
+        }
+
     }
+}
