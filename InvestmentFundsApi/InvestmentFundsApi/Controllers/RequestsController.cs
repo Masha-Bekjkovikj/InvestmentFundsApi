@@ -7,11 +7,11 @@ using System.Web.Http;
 
 namespace InvestmentFundsApi.Controllers
 {
-    public class RequestController : ApiController
+    public class RequestsController : ApiController
     {
         [HttpPost]
         [Route("request/sell", Name = "Request_Sell_Shares_Post")]
-        public void Post(int FundId, int SellType, Decimal Amount, int SellBank, string SellAccount )
+        public void Post(int FundId, int SellType, decimal Amount, int SellBank, string SellAccount )
         {
         }
 
