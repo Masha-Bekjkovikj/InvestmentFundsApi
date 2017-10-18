@@ -21,21 +21,21 @@ namespace InvestmentFundsApi.Controllers
         [HttpPost]
         [Route("request/sell", Name = "RequestSellSharesPost")]
         [SwaggerOperation("SellRequest")]
-        public void Post(int FundId, int SellType, decimal Amount, int SellBank, string SellAccount )
+        public void Post(SellRequest sellRequest)
         {
         }
 
         [HttpPost]
         [Route("request/transfer", Name = "RequestTransferSharesPost")]
         [SwaggerOperation("TransferRequest")]
-        public void Post(string sourceFund, string destinationFund, string sellType, decimal ProspectAcceptanceTransfer, bool RiskAcceptanceTransfer)
+        public void Post(TransferRequest transferRequest)
         {
 
         }
         [HttpPost]
         [Route("request/buy", Name = "RequestBuySharesPost")]
         [SwaggerOperation("BuyRequest")]
-        public void Post(int FundId, decimal Amount, int PaymentType)
+        public void Post(BuyRequest buyRequest)
         {
 
         }

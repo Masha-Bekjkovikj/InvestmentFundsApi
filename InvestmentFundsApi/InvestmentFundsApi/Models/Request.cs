@@ -17,6 +17,7 @@ namespace InvestmentFundsApi.Models
         public string paymentType { get; set; }
         public bool fundAcceptance { get; set; }
     }
+
     public class SellRequest : Request
     {
         public int fondId { get; set; }
