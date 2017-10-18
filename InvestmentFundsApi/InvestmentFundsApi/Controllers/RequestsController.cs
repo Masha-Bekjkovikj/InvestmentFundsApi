@@ -5,28 +5,36 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using InvestmentFundsApi.Models;
 
 namespace InvestmentFundsApi.Controllers
 {
     public class RequestsController : ApiController
     {
+        [HttpGet]
+        [Route("requests", Name = "GetRequests")]
+        [SwaggerOperation("GetRequests")]
+        public List<Request> Get()
+        {
+            return new List<Request>();
+        }
         [HttpPost]
         [Route("request/sell", Name = "RequestSellSharesPost")]
-        [SwaggerOperation("SellShares")]
+        [SwaggerOperation("SellRequest")]
         public void Post(int FundId, int SellType, decimal Amount, int SellBank, string SellAccount )
         {
         }
 
         [HttpPost]
         [Route("request/transfer", Name = "RequestTransferSharesPost")]
-        [SwaggerOperation("TransferShares")]
+        [SwaggerOperation("TransferRequest")]
         public void Post(string sourceFund, string destinationFund, string sellType, decimal ProspectAcceptanceTransfer, bool RiskAcceptanceTransfer)
         {
 
         }
         [HttpPost]
         [Route("request/buy", Name = "RequestBuySharesPost")]
-        [SwaggerOperation("BuyShares")]
+        [SwaggerOperation("BuyRequest")]
         public void Post(int FundId, decimal Amount, int PaymentType)
         {
 
