@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Swashbuckle.Swagger.Annotations;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -10,19 +11,22 @@ namespace InvestmentFundsApi.Controllers
     public class RequestsController : ApiController
     {
         [HttpPost]
-        [Route("request/sell", Name = "Request_Sell_Shares_Post")]
+        [Route("request/sell", Name = "RequestSellSharesPost")]
+        [SwaggerOperation("SellShares")]
         public void Post(int FundId, int SellType, decimal Amount, int SellBank, string SellAccount )
         {
         }
 
         [HttpPost]
-        [Route("request/transfer/", Name = "Request_Transfers_Shares_Post")]
+        [Route("request/transfer", Name = "RequestTransferSharesPost")]
+        [SwaggerOperation("TransferShares")]
         public void Post(string sourceFund, string destinationFund, string sellType, decimal ProspectAcceptanceTransfer, bool RiskAcceptanceTransfer)
         {
 
         }
         [HttpPost]
-        [Route("request/buy/", Name = "Request_Buy_Shares_Post")]
+        [Route("request/buy", Name = "RequestBuySharesPost")]
+        [SwaggerOperation("BuyShares")]
         public void Post(int FundId, decimal Amount, int PaymentType)
         {
 
